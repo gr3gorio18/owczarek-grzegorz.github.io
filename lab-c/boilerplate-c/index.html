@@ -6,9 +6,34 @@
     <title>Grzegorz Owczarek (57682) - PTW LAB C</title>
 
     <link rel="stylesheet" href="styles.css" type="text/css">
+
+    <link rel="stylesheet" href="leaflet-1.9.4/leaflet.css">
+    <script src="leaflet-1.9.4/leaflet-src.js"></script>
+    <script src="leaflet-1.9.4/leaflet-providers.js"></script>
+    <script src="leaflet-1.9.4/leaflet-image.js"></script>
     <script src="scripts.js" defer></script>
 </head>
 <body>
+
+<div class="grid-container">
+    <div class="grid-item">
+        <div id="map"></div>
+        <button id="getLocation">Get current location</button>
+    </div>
+
+    <div class="grid-item">
+        <canvas id="rasterMap"></canvas>
+        <button id="getRasterMap">Get raster map</button>
+    </div>
+
+    <div class="grid-item">
+        <div id="puzzle-pieces"></div>
+    </div>
+
+    <div class="grid-item">
+        <div id="puzzle-board"></div>
+    </div>
+</div>
 
 </body>
 </html>
