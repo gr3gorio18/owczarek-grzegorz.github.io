@@ -140,11 +140,28 @@ function checkWin() {
   dropZones.forEach(zone => {
     if (zone.children.length > 0) {
       const piece = zone.children[0];
-      if (zone.dataset.targetIndex === piece.dataset.correctIndex) {
+      if (zone.dataset.targetIndex == piece.dataset.correctIndex) {
         correctCount++;
       }
     }
   });
+
+  console.log("Aktualnie poprawnie ułożonych puzzli: " + correctCount + " / 16");
+
+  if (correctCount === 16) {
+    console.debug("Mechanizm wykrywania: Wszystkie puzzle zostały ułożone poprawnie!");
+
+    setTimeout(() => {
+      if (Notification.permission === "granted") {
+        new Notification("Zwycięstwo!", {
+          body: "Gratulacje, poprawnie ułożyłeś całą mapę!"
+        });
+      } else {
+        alert("Zwycięstwo! Gratulacje, poprawnie ułożyłeś całą mapę!");
+      }
+    }, 100);
+  }
+}
 
   if (correctCount === 16) {
     console.debug("Wszystkie puzzle zostały ułożone poprawnie!");
@@ -157,5 +174,4 @@ function checkWin() {
         alert("Zwycięstwo! Gratulacje, poprawnie ułożyłeś całą mapę!");
       }
     }, 100);
-  }
 }
