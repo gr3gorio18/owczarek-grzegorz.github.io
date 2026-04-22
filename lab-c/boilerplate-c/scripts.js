@@ -147,6 +147,7 @@ function checkWin() {
   });
 
   if (correctCount === 16) {
+    console.debug("Wszystkie puzzle zostały ułożone poprawnie!");
     setTimeout(() => {
       if (Notification.permission === "granted") {
         new Notification("Zwycięstwo!", {
