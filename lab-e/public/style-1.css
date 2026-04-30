@@ -1,0 +1,124 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+header {
+  flex-shrink: 0;
+  min-height: 200px;
+  background-image: url("tlo-header.jpg");
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-family: 'Dancing Script', cursive;
+}
+.container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: 'Brush Script MT', cursive;
+  background-image: url("tlo.jpg");
+}
+.left, .right {
+  flex: 1;
+  padding: 10px;
+  margin: 20px;
+}
+.middle {
+  flex: 2;
+  padding: 10px;
+  background-color: #d19475;
+  border: 10px solid #945303;
+  border-radius: 8px;
+}
+.right {
+  background-color: #d19475;
+  border: 8px solid #945303;
+  border-radius: 8px;
+}
+.left h2{
+  color: white;
+}
+footer{
+  flex-shrink: 0;
+  background-color: #945303;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-top: 3px solid black;
+  font-family: 'Dancing Script', cursive;
+}
+footer h3 {
+  margin: 0;
+  font-size: 18px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+h2 {
+  text-align: center;
+  font-size: 30px;
+}
+p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+ul {
+  background-color: #d19475;
+  border: 8px solid #945303;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left, .middle, .right {
+    flex: 1;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  header {
+    min-height: 150px;
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .left, .middle, .right {
+    width: 95%;
+  }
+
+  header {
+    min-height: 120px;
+    padding: 5px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  ul {
+    padding: 10px;
+  }
+}
+

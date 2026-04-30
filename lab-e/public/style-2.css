@@ -1,0 +1,139 @@
+body {
+  background-color: #e8f5e8;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background-image: url("tlo2-header.jpg");
+  color: white;
+  text-align: center;
+  padding: 30px;
+  font-size: 2em;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "middle"
+    "bottom";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  flex: 1;
+  padding: 20px;
+}
+
+.middle {
+  grid-area: middle;
+  background-color: #f1f8e9;
+  border: 2px solid #4caf50;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #2e7d32;
+}
+
+.middle h2 {
+  color: #1976d2;
+  font-size: 1.5em;
+}
+
+.middle p {
+  line-height: 1.6;
+  font-size: 1em;
+}
+
+.left {
+  display: block;
+  grid-area: bottom;
+  background-color: #f1f8e9;
+  border: 2px solid #4caf50;
+  border-radius: 10px;
+  padding: 20px;
+  color: #2e7d32;
+  margin-right: 10px;
+}
+
+.left h2 {
+  color: #1976d2;
+  font-size: 1.5em;
+}
+
+.left ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.right {
+  grid-area: bottom;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.right h2 {
+  color: #1976d2;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.right img {
+  width: 150px;
+  height: auto;
+  border: 2px solid #2196f3;
+  border-radius: 8px;
+  margin: 5px;
+}
+
+footer {
+  background: linear-gradient(to right, #4caf50, #2196f3);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-areas:
+      "middle"
+      "bottom";
+    grid-template-columns: 1fr;
+  }
+  .left, .right {
+    margin: 10px 0;
+  }
+  .right img {
+    width: 120px;
+  }
+  header {
+    padding: 20px;
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .right {
+    flex-direction: column;
+    align-items: center;
+  }
+  .right img {
+    width: 100px;
+    margin: 5px;
+  }
+  .left, .middle {
+    padding: 10px;
+  }
+  header {
+    padding: 15px;
+    font-size: 1.2em;
+  }
+}
+
